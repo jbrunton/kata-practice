@@ -3,7 +3,7 @@ const closest = (xs) => {
     return null;
   }
 
-  return 1;
+  return xs[0];
 };
 
 module.exports = closest;
