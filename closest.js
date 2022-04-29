@@ -9,11 +9,13 @@ const closest = (xs) => {
     return null;
   }
 
-  if (closerToZero(xs[1], xs[0])) {
-    return xs[1];
+  var closest = xs[0];
+  const candidate = xs[1];
+  if (closerToZero(candidate, closest)) {
+    closest = candidate;
   }
 
-  return xs[0];
+  return closest;
 };
 
 module.exports = closest;
