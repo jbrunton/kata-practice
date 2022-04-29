@@ -3,6 +3,10 @@ const closest = (xs) => {
     return null;
   }
 
+  if (xs.length > 1) {
+    return xs[1];
+  }
+
   return xs[0];
 };
 
