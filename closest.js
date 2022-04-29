@@ -3,7 +3,7 @@ const closest = (xs) => {
     return null;
   }
 
-  if (xs[0] > xs[1]) {
+  if (Math.abs(xs[0]) > Math.abs(xs[1])) {
     return xs[1];
   }
 
