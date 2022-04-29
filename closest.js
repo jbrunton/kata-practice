@@ -1,5 +1,5 @@
 const closerToZero = (x, y) => {
-  return Math.abs(x) < Math.abs(y);
+  return Math.abs(x) < Math.abs(y) || (Math.abs(x) === Math.abs(y) && x > 0);
 };
 
 const closest = (xs) => {
