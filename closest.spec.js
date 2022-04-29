@@ -31,3 +31,7 @@ test("same magnitude, different signs", () => {
 test("three items, desc", () => {
   expect(closest([3, 2, 1])).toEqual(1);
 });
+
+test("multiple items, mixed signs", () => {
+  expect(closest([3, -1, 4, 1, 5])).toEqual(1);
+});
