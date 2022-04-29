@@ -1,9 +1,13 @@
+const closerToZero = (x, y) => {
+  return Math.abs(x) < Math.abs(y);
+};
+
 const closest = (xs) => {
   if (xs.length === 0) {
     return null;
   }
 
-  if (Math.abs(xs[0]) > Math.abs(xs[1])) {
+  if (closerToZero(xs[1], xs[0])) {
     return xs[1];
   }
 
