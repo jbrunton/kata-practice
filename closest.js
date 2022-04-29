@@ -10,7 +10,7 @@ const closest = (xs) => {
   }
 
   var closest = xs[0];
-  for (const candidate of xs) {
+  for (const candidate of xs.slice(1)) {
     if (closerToZero(candidate, closest)) {
       closest = candidate;
     }
