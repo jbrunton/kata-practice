@@ -1,7 +1,5 @@
 const roman = (input) => {
-  if (input === 3) return "III";
-  if (input === 2) return "II";
-  if (input === 1) return "I";
+  if (input >= 1) return "I" + roman(input - 1);
   return "";
 };
 
