@@ -9,6 +9,9 @@ const roman = require("./roman");
   [6, "VI"],
   [10, "X"],
   [11, "XI"],
+  [15, "XV"],
+  [20, "XX"],
+  [26, "XXVI"],
 ].forEach(([input, expected]) => {
   test(`converts ${input}`, () => {
     expect(roman(input)).toEqual(expected);
