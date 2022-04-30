@@ -31,3 +31,7 @@ test("two items, negative, asc", () => {
 test("two items, same size, mixed signs, asc", () => {
   expect(closest([-1, 1])).toEqual(1);
 });
+
+test("two items, same size, mixed signs, desc", () => {
+  expect(closest([1, -1])).toEqual(1);
+});
