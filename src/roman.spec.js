@@ -11,3 +11,7 @@ test("converts 1", () => {
 test("converts 2", () => {
   expect(roman(2)).toEqual("II");
 });
+
+test("converts 3", () => {
+  expect(roman(3)).toEqual("III");
+});
