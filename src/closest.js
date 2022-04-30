@@ -2,8 +2,7 @@ const closest = (xs) => {
   if (xs.length === 0) return null;
 
   var closest = xs[0];
-  if (xs.length === 2) {
-    const candidate = xs[1];
+  for (const candidate of xs) {
     if (closerToZero(candidate, closest)) {
       closest = candidate;
     }
