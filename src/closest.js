@@ -4,11 +4,16 @@ const closest = (xs) => {
   var closest = xs[0];
   if (xs.length === 2) {
     const candidate = xs[1];
-    if (Math.abs(candidate) < Math.abs(closest)) {
+    if (closerToZero(candidate, closest)) {
       closest = candidate;
     }
   }
+
   return closest;
+};
+
+const closerToZero = (candidate, closest) => {
+  return Math.abs(candidate) < Math.abs(closest);
 };
 
 module.exports = closest;
