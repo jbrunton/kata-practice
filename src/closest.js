@@ -1,9 +1,3 @@
-const closerToZero = (x, y) => {
-  const sizeX = Math.abs(x);
-  const sizeY = Math.abs(y);
-  return sizeX < sizeY || (sizeX === sizeY && x > 0);
-};
-
 const closest = (xs) => {
   if (xs.length === 0) {
     return null;
@@ -17,6 +11,15 @@ const closest = (xs) => {
   }
 
   return closest;
+};
+
+const closerToZero = (candidate, closest) => {
+  const candidateSize = Math.abs(candidate);
+  const closestSize = Math.abs(closest);
+  return (
+    candidateSize < closestSize ||
+    (candidateSize === closestSize && candidate >= 0)
+  );
 };
 
 module.exports = closest;
