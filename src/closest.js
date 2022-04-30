@@ -13,7 +13,7 @@ const closest = (xs) => {
 };
 
 const closerToZero = (candidate, closest) => {
-  return Math.abs(candidate) < Math.abs(closest);
+  return Math.abs(candidate) < Math.abs(closest) || candidate === -closest;
 };
 
 module.exports = closest;
