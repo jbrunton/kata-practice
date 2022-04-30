@@ -1,3 +1,5 @@
-const roman = () => {};
+const roman = () => {
+  return "";
+};
 
 module.exports = roman;
