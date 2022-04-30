@@ -1,4 +1,6 @@
 const numerals = [
+  { value: 100, string: "C" },
+  { value: 50, string: "L" },
   { value: 10, string: "X" },
   { value: 9, string: "IX" },
   { value: 5, string: "V" },
