@@ -15,3 +15,7 @@ test("singleton array [1]", () => {
 test("two items, positive, desc", () => {
   expect(closest([2, 1])).toEqual(1);
 });
+
+test("two items, incl 0, desc", () => {
+  expect(closest([1, 0])).toEqual(0);
+});
