@@ -16,6 +16,7 @@ const roman = require("./roman");
   [26, "XXVI"],
   [50, "L"],
   [100, "C"],
+  [234, "CCXXXIV"],
 ].forEach(([input, expected]) => {
   test(`converts ${input}`, () => {
     expect(roman(input)).toEqual(expected);
