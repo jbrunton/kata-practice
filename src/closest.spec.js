@@ -23,3 +23,7 @@ test("two items, incl 0, desc", () => {
 test("two items, positive, asc", () => {
   expect(closest([1, 2])).toEqual(1);
 });
+
+test("two items, negative, asc", () => {
+  expect(closest([-2, -1])).toEqual(-1);
+});
