@@ -1,5 +1,7 @@
 const closest = (xs) => {
-  if (xs.length === 0) return null;
+  if (xs.length === 0) {
+    return null;
+  }
 
   var closest = xs[0];
   for (const candidate of xs.slice(1)) {
