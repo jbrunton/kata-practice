@@ -1,7 +1,12 @@
+const numerals = [
+  [10, "X"],
+  [5, "V"],
+  [1, "I"],
+];
+
 const roman = (input) => {
-  if (input >= 10) return "X" + roman(input - 10);
-  if (input >= 5) return "V" + roman(input - 5);
-  if (input >= 1) return "I" + roman(input - 1);
+  const numeral = numerals.find(([value, _]) => input >= value);
+  if (numeral) return numeral[1] + roman(input - numeral[0]);
   return "";
 };
 
