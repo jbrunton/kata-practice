@@ -4,7 +4,7 @@ const closest = (xs) => {
   var closest = xs[0];
   if (xs.length === 2) {
     const candidate = xs[1];
-    if (candidate < closest) {
+    if (Math.abs(candidate) < Math.abs(closest)) {
       closest = candidate;
     }
   }
