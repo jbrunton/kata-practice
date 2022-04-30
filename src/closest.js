@@ -13,9 +13,11 @@ const closest = (xs) => {
 };
 
 const closerToZero = (candidate, closest) => {
+  const candidateSize = Math.abs(candidate);
+  const closestSize = Math.abs(closest);
   return (
-    Math.abs(candidate) < Math.abs(closest) ||
-    (Math.abs(candidate) === -closest && candidate >= 0)
+    candidateSize < closestSize ||
+    (candidateSize === closestSize && candidate >= 0)
   );
 };
 
