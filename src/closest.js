@@ -1,11 +1,13 @@
 const closest = (xs) => {
   if (xs.length === 0) return null;
+  let closest = xs[0];
   if (xs.length === 2) {
-    if (xs[0] > xs[1]) {
-      return xs[1];
+    let candidate = xs[1];
+    if (candidate < closest) {
+      closest = candidate;
     }
   }
-  return xs[0];
+  return closest;
 };
 
 module.exports = closest;
