@@ -8,4 +8,8 @@ describe("closest", () => {
   test("singleton list, positive", () => {
     expect(closest([1])).toEqual(1);
   });
+
+  test("singleton list, negative", () => {
+    expect(closest([-1])).toEqual(-1);
+  });
 });
