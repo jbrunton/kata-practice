@@ -1,8 +1,7 @@
 const closest = (xs) => {
   if (xs.length === 0) return null;
   let closest = xs[0];
-  for (let i = 1; i < xs.length; ++i) {
-    let candidate = xs[i];
+  for (const candidate of xs) {
     if (isCloser(candidate, closest)) {
       closest = candidate;
     }
