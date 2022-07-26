@@ -16,4 +16,8 @@ describe("closest", () => {
   test("two items, desc", () => {
     expect(closest([2, 1])).toEqual(1);
   });
+
+  test("two items, asc", () => {
+    expect(closest([1, 2])).toEqual(1);
+  });
 });
