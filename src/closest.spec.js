@@ -20,4 +20,8 @@ describe("closest", () => {
   test("two items, asc", () => {
     expect(closest([1, 2])).toEqual(1);
   });
+
+  test("two items, negative", () => {
+    expect(closest([-1, -2])).toEqual(-1);
+  });
 });
