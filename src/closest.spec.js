@@ -24,4 +24,8 @@ describe("closest", () => {
   test("two items, negative", () => {
     expect(closest([-1, -2])).toEqual(-1);
   });
+
+  test("two items, same size, different signs", () => {
+    expect(closest([-1, 1])).toEqual(1);
+  });
 });
