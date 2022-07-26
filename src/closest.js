@@ -1,24 +1,18 @@
 const closest = (xs) => {
-  if (xs.length === 0) {
-    return null;
-  }
-
-  var closest = xs[0];
-  for (const candidate of xs.slice(1)) {
-    if (closerToZero(candidate, closest)) {
+  if (xs.length === 0) return null;
+  let closest = xs[0];
+  for (const candidate of xs) {
+    if (isCloser(candidate, closest)) {
       closest = candidate;
     }
   }
-
   return closest;
 };
 
-const closerToZero = (candidate, closest) => {
-  const candidateSize = Math.abs(candidate);
-  const closestSize = Math.abs(closest);
+const isCloser = (candidate, closest) => {
   return (
-    candidateSize < closestSize ||
-    (candidateSize === closestSize && candidate >= 0)
+    Math.abs(candidate) < Math.abs(closest) ||
+    (Math.abs(candidate) === Math.abs(closest) && candidate > 0)
   );
 };
 
