@@ -3,7 +3,7 @@ const closest = (xs) => {
   let closest = xs[0];
   if (xs.length === 2) {
     let candidate = xs[1];
-    if (candidate < closest) {
+    if (Math.abs(candidate) < Math.abs(closest)) {
       closest = candidate;
     }
   }
