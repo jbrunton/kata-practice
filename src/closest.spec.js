@@ -1,3 +1,7 @@
 const closest = require("./closest");
 
-describe("closest", () => {});
+describe("closest", () => {
+  test("empty array", () => {
+    expect(closest([])).toEqual(null);
+  });
+});
